@@ -1,76 +1,43 @@
     <script>
         // Get the current date
         var currentDate = new Date();
-        // Define your quotes and their respective dates
-        var quotes = [
+        // Define your Naxatras and their respective dates
+        var naxatra = [
                
-    { date: new Date('2024-07-04'), text: "आषाढ कृष्ण चतुर्दशी मृगशिरा" },
-    { date: new Date('2024-07-05'), text: "आषाढ कृष्ण औशी आर्द्रा" },
-    { date: new Date('2024-07-06'), text: "आषाढ शुक्ल प्रतिपदा पुनर्वसु" },
-    { date: new Date('2024-07-07'), text: "आषाढ शुक्ल द्वितीया तिष्य" },
-    { date: new Date('2024-07-08'), text: "आषाढ शुक्ल तृतीया तिष्य" },
-    { date: new Date('2024-07-09'), text: "आषाढ शुक्ल तृतीया आश्लेषा" },
-    { date: new Date('2024-07-10'), text: "आषाढ शुक्ल चतुर्थी मघा" },
-    { date: new Date('2024-07-11'), text: "आषाढ शुक्ल पन्चमी पूर्व फाल्गुनी" },
-    { date: new Date('2024-07-12'), text: "आषाढ शुक्ल षष्ठी उत्तर फाल्गुनी" },
-    { date: new Date('2024-07-13'), text: "आषाढ शुक्ल सप्तमी हस्त" },
-    { date: new Date('2024-07-14'), text: "आषाढ शुक्ल अष्टमी चित्रा" },
-    { date: new Date('2024-07-15'), text: "आषाढ शुक्ल नवमी स्वाति" },
-    { date: new Date('2024-07-16'), text: "आषाढ शुक्ल दशमी विशाखा" },
-    { date: new Date('2024-07-17'), text: "आषाढ शुक्ल एकादशी अनुराधा" },
-    { date: new Date('2024-07-18'), text: "आषाढ शुक्ल द्वादशी ज्येष्ठा" },
-    { date: new Date('2024-07-19'), text: "आषाढ शुक्ल त्रयोदशी मूल" },
-    { date: new Date('2024-07-20'), text: "आषाढ शुक्ल चतुर्दशी पूर्वषाढ़ा" },
-    { date: new Date('2024-07-21'), text: "आषाढ पूर्णिमा उत्तरषाढ़ा ( गुरुपूर्णिमा )" },
-    { date: new Date('2024-07-22'), text: "श्रावण कृष्ण प्रतिपदा श्रवण" },
-    { date: new Date('2024-07-23'), text: "श्रावण कृष्ण द्वितीया धनिष्ठा" },
-    { date: new Date('2024-07-24'), text: "श्रावण कृष्ण तृतीया शतभिषा" },
-    { date: new Date('2024-07-25'), text: "श्रावण कृष्ण चतुर्थी पूर्वभाद्रा " },
-    { date: new Date('2024-07-26'), text: "श्रावण कृष्ण पंचमी/षष्ठी उतरभाद्र " },
-    { date: new Date('2024-07-27'), text: "श्रावण कृष्ण सप्तमी रेवती" },
-    { date: new Date('2024-07-28'), text: "श्रावण कृष्ण अष्टमी अश्विनी" },
-    { date: new Date('2024-07-29'), text: "श्रावण कृष्ण नवमी भरणी" },
-    { date: new Date('2024-07-30'), text: "श्रावण कृष्ण दशमी कृत्तिका" },
-    { date: new Date('2024-07-31'), text: "श्रावण कृष्ण एकादशी रोहिणी" },
-    { date: new Date('2024-08-01'), text: "श्रावण कृष्ण द्वादशी मृगशिरा" },
-    { date: new Date('2024-08-02'), text: "श्रावण कृष्ण त्रयोदशी आर्द्रा" },
-    { date: new Date('2024-08-03'), text: "श्रावण कृष्ण चतुर्दशी पुनर्वसु" },
-    { date: new Date('2024-08-04'), text: "श्रावण कृष्ण अमावास्या तिष्य" },
-    { date: new Date('2024-08-05'), text: "श्रावण शुक्ल प्रतिपदा आश्रेषा" },
-    { date: new Date('2024-08-06'), text: "श्रावण शुक्ल द्वितीया मघा नक्षत्र " },
-    { date: new Date('2024-08-07'), text: "श्रावण शुक्ल तृतीया पूर्वफाल्गुनी नक्षत्र" },
-    { date: new Date('2024-08-08'), text: "श्रावण शुक्ल चतुर्थी उत्तरफाल्गुनी नक्षत्र" },
-    { date: new Date('2024-08-09'), text: "श्रावण शुक्ल पंचमी हस्त नक्षत्र" },
-    { date: new Date('2024-08-10'), text: "श्रावण शुक्ल षष्ठी चित्रा नक्षत्र" },
-    { date: new Date('2024-08-11'), text: "श्रावण शुक्ल सप्तमी स्वाति नक्षत्र" },
-    { date: new Date('2024-08-12'), text: "श्रावण शुक्ल अष्टमी स्वाति नक्षत्र" },
-    { date: new Date('2024-08-13'), text: "श्रावण शुक्ल नवमी विशाखा नक्षत्र" },
-    { date: new Date('2024-08-14'), text: "श्रावण शुक्ल नवमी अनुराधा नक्षत्र" },
-    { date: new Date('2024-08-15'), text: "श्रावण शुक्ल दशमी ज्येष्ठा" },
-    { date: new Date('2024-08-16'), text: "श्रावण शुक्ल एकादशी/द्वादशी मूल नक्षत्र" },
-    { date: new Date('2024-08-17'), text: "श्रावण शुक्ल त्रयोदशी पूर्वषाढा नक्षत्र" },
-    { date: new Date('2024-08-18'), text: "श्रावण शुक्ल चतुर्दशी उत्तरषाढा नक्षत्र" },
-    { date: new Date('2024-08-19'), text: "श्रावण शुक्ल पूर्णिमा श्रवण नक्षत्र" },
-	{ date: new Date('2024-08-20'), text: "भाद्र कृष्ण प्रतिपदा धनिष्ठा नक्षत्र" },
-    { date: new Date('2024-08-21'), text: "भाद्र कृष्ण द्वितीया शतभिषा / पूर्वभाद्र नक्षत्र" },
-    { date: new Date('2024-08-22'), text: "भाद्र कृष्ण तृतीया उत्तरभाद्र नक्षत्र" },
-    { date: new Date('2024-08-23'), text: "भाद्र कृष्ण चतुर्थी रेवती नक्षत्र" },
-    { date: new Date('2024-08-24'), text: "भाद्र कृष्ण पंचमी अश्विनी नक्षत्र" },
-    { date: new Date('2024-08-25'), text: "भाद्र कृष्ण षष्ठी भरणी नक्षत्र" },
-    { date: new Date('2024-08-26'), text: "भाद्र कृष्ण सप्तमी कृत्तिका नक्षत्र" },
-    { date: new Date('2024-08-27'), text: "भाद्र कृष्ण अष्टमी/नवमी रोहिणी नक्षत्र" },
-    { date: new Date('2024-08-28'), text: "भाद्र कृष्ण दशमी मृगशिरा नक्षत्र" },
-    { date: new Date('2024-08-29'), text: "भाद्र कृष्ण एकादशी आद्रा नक्षत्र" },
-    { date: new Date('2024-08-30'), text: "भाद्र कृष्ण एकादशी / द्वादशी पुनर्वसु नक्षत्र" },
-    { date: new Date('2024-08-31'), text: "भाद्र कृष्ण त्रयोदशी तिष्य नक्षत्र" },
-    { date: new Date('2024-09-01'), text: "भाद्र कृष्ण चतुर्दशी अश्लेषा नक्षत्र" },
-    { date: new Date('2024-09-02'), text: "भाद्र अमावस्या मघा नक्षत्र" },      
-    { date: new Date('2024-09-03'), text: "भाद्र अमावस्या पूर्वफाल्गुनी नक्षत्र" },
-	{ date: new Date('2024-09-04'), text: "भाद्र शुक्ल प्रतिपदा उत्तर फाल्गुनी नक्षत्र" },
-    { date: new Date('2024-09-05'), text: "शुक्ल द्वितीया भाद्र हस्ता नक्षत्र" },
-    { date: new Date('2024-09-06'), text: "शुक्ल तृतीया भाद्र हस्ता नक्षत्र" },
-    { date: new Date('2024-09-07'), text: "शुक्ल चतुर्थी भाद्र चित्रा नक्षत्र" },
-    { date: new Date('2024-09-08'), text: "शुक्ल पंचमी भाद्र स्वाति नक्षत्र" }
+    { date: new Date('2024-08-06'), text: " मघा नक्षत्र " },
+    { date: new Date('2024-08-07'), text: " पूर्वफाल्गुनी नक्षत्र " },
+    { date: new Date('2024-08-08'), text: " उत्तरफाल्गुनी नक्षत्र " },
+    { date: new Date('2024-08-09'), text: " हस्त नक्षत्र " },
+    { date: new Date('2024-08-10'), text: " चित्रा नक्षत्र " },
+    { date: new Date('2024-08-11'), text: " स्वाति नक्षत्र " },
+    { date: new Date('2024-08-12'), text: " स्वाति नक्षत्र " },
+    { date: new Date('2024-08-13'), text: " विशाखा नक्षत्र " },
+    { date: new Date('2024-08-14'), text: " अनुराधा नक्षत्र " },
+    { date: new Date('2024-08-15'), text: " ज्येष्ठा नक्षत्र " },
+    { date: new Date('2024-08-16'), text: " मूल नक्षत्र " },
+    { date: new Date('2024-08-17'), text: " पूर्वषाढा नक्षत्र " },
+    { date: new Date('2024-08-18'), text: " उत्तरषाढा नक्षत्र " },
+    { date: new Date('2024-08-19'), text: " श्रवण नक्षत्र " },
+    { date: new Date('2024-08-20'), text: " धनिष्ठा नक्षत्र " },
+    { date: new Date('2024-08-21'), text: " शतभिषा / पूर्वभाद्र नक्षत्र " },
+    { date: new Date('2024-08-22'), text: " उत्तरभाद्र नक्षत्र " },
+    { date: new Date('2024-08-23'), text: " रेवती नक्षत्र " },
+    { date: new Date('2024-08-24'), text: " अश्विनी नक्षत्र " },
+    { date: new Date('2024-08-25'), text: " भरणी नक्षत्र " },
+    { date: new Date('2024-08-26'), text: " कृत्तिका नक्षत्र " },
+    { date: new Date('2024-08-27'), text: " रोहिणी नक्षत्र" },
+    { date: new Date('2024-08-28'), text: " मृगशिरा नक्षत्र " },
+    { date: new Date('2024-08-29'), text: " आद्रा नक्षत्र " },
+    { date: new Date('2024-08-30'), text: " पुनर्वसु नक्षत्र " },
+    { date: new Date('2024-08-31'), text: " तिष्य नक्षत्र " },
+    { date: new Date('2024-09-01'), text: " अश्लेषा नक्षत्र " },
+    { date: new Date('2024-09-02'), text: " मघा नक्षत्र " },      
+    { date: new Date('2024-09-03'), text: " पूर्वफाल्गुनी नक्षत्र " },
+    { date: new Date('2024-09-04'), text: " उत्तर फाल्गुनी नक्षत्र " },
+    { date: new Date('2024-09-05'), text: "  हस्ता नक्षत्र " },
+    { date: new Date('2024-09-06'), text: " हस्ता नक्षत्र " },
+    { date: new Date('2024-09-07'), text: " चित्रा नक्षत्र " },
+    { date: new Date('2024-09-08'), text: " स्वाति नक्षत्र " }
     
 
     
@@ -79,13 +46,13 @@
   ];
       
         // Find the quote that matches the current date
-        var matchingQuote = quotes.find(function(quote) {
+        var matchingNaxatra = quotes.find(function(naxatra) {
             return currentDate.toDateString() === quote.date.toDateString();
         });
         // Display the quote if found
-        if (matchingQuote) {
-            document.getElementById('quote').textContent = matchingQuote.text;
+        if (matchingNaxatra) {
+            document.getElementById('naxatra').textContent = matchingNaxatra.text;
         } else {
-            document.getElementById('quote').textContent = "जय श्रीमन्नारायण!";
+            document.getElementById('naxatra').textContent = "जय श्रीमन्नारायण!";
         }
     </script>

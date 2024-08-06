@@ -7,23 +7,20 @@ const nepali_years_and_days_in_months = [
 
 const monthNames = ["बैशाख", "जेष्ठ", "आषाढ़", "श्रावण", "भाद्र", "आश्विन", "कार्तिक", "मंसिर", "पुष", "माघ", "फाल्गुण", "चैत्र"];
 
-function getCurrentNepaliDate() {
-    const currentDate = new Date();
-    // Add logic to convert current Gregorian date to Nepali date
-    // For simplicity, using a fixed Nepali date
+function getSpecificNepaliDate() {
     return {
         year: 2081,
-        month: 1,
-        day: 15
+        month: 4,
+        day: 22
     };
 }
 
 function displayNepaliDate() {
     const dateElement = document.getElementById("nepaliDate");
     const daysElement = document.getElementById("days");
-    const { year, month, day } = getCurrentNepaliDate();
+    const { year, month, day } = getSpecificNepaliDate();
 
-    dateElement.textContent = `आजको मिति: ${year} ${monthNames[month - 1]} ${day}`;
+    dateElement.textContent = `आजको मिति: ${year.toString().replace(/\d/g, d => "०१२३४५६७८९"[d])} ${monthNames[month - 1]} ${day.toString().replace(/\d/g, d => "०१२३४५६७८९"[d])}`;
 
     const daysInMonth = nepali_years_and_days_in_months.find(y => y[0] === year)[month];
     daysElement.innerHTML = '';
@@ -31,10 +28,9 @@ function displayNepaliDate() {
         const dayElement = document.createElement('div');
         dayElement.textContent = i.toString().replace(/\d/g, d => "०१२३४५६७८९"[d]);
         dayElement.className = 'day';
-        dayElement.onclick = () => alert(`तपाईंले ${year} ${monthNames[month - 1]} ${i.toString().replace(/\d/g, d => "०१२३४५६७८९"[d])} मिति चयन गर्नुभयो`);
+        dayElement.onclick = () => alert(`तपाईंले ${year.toString().replace(/\d/g, d => "०१२३४५६७८९"[d])} ${monthNames[month - 1]} ${i.toString().replace(/\d/g, d => "०१२३४५६७८९"[d])} मिति चयन गर्नुभयो`);
         daysElement.appendChild(dayElement);
     }
 }
 
 displayNepaliDate();
-

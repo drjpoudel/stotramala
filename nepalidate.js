@@ -1,5 +1,4 @@
-<script>
-        const nepaliYearsAndDaysInMonths = [
+  const nepaliYearsAndDaysInMonths = [
             [2000, 30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
             [2001, 31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
             [2082, 30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30]

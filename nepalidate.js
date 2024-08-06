@@ -23,7 +23,7 @@ const nepali_years_and_days_in_months = [
     [2021, 31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
     [2022, 31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 30],
     [2023, 31, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
-    [2024, 31, 31, 31, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+    [2024, 31, 31, 31, 32, 31, 31, 30, 29, 30, 29, 30, 30],
     [2025, 31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
     [2026, 31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 31],
     [2027, 30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
@@ -80,7 +80,7 @@ const nepali_years_and_days_in_months = [
     [2078, 31, 31, 31, 32, 31, 31, 30, 29, 30, 29, 30, 30],
     [2079, 31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
     [2080, 31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 30],
-    [2081, 31, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30],
+    [2081, 31, 31, 32, 32, 31, 30, 30, 30, 29, 30, 30, 30],
     [2082, 30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30],
     [2083, 31, 31, 32, 31, 31, 30, 30, 30, 29, 30, 30, 30],
     [2084, 31, 31, 32, 31, 31, 30, 30, 30, 29, 30, 30, 30],
@@ -150,51 +150,51 @@ function getNepaliMonthInString(month) {
 
     switch (month) {
         case 1:
-            nepaliMonth = "à¤µà¥ˆà¤¶à¤¾à¤–";
+            nepaliMonth = "बैशाख";
             break;
 
         case 2:
-            nepaliMonth = "à¤œà¥‡à¤·à¥à¤ ";
+            nepaliMonth = "जेष्ठ";
             break;
 
         case 3:
-            nepaliMonth = "à¤†à¤·à¤¾à¤¢";
+            nepaliMonth = "असार";
             break;
 
         case 4:
-            nepaliMonth = "à¤¶à¥à¤°à¤¾à¤µà¤£";
+            nepaliMonth = "श्रावन";
             break;
 
         case 5:
-            nepaliMonth = "à¤­à¤¾à¤¦à¥à¤°";
+            nepaliMonth = "भाद्र";
             break;
 
         case 6:
-            nepaliMonth = "à¤†à¤¶à¥à¤µà¤¿à¤¨";
+            nepaliMonth = "असोज";
             break;
 
         case 7:
-            nepaliMonth = "à¤•à¤¾à¤°à¥à¤¤à¤¿à¤•";
+            nepaliMonth = "कार्तिक";
             break;
 
         case 8:
-            nepaliMonth = "à¤®à¤¾à¤°à¥à¤—à¤¶à¥€à¤°à¥à¤·";
+            nepaliMonth = "मंग्सिर";
             break;
 
         case 9:
-            nepaliMonth = "à¤ªà¥Œà¤·";
+            nepaliMonth = "पौष";
             break;
 
         case 10:
-            nepaliMonth = "à¤®à¤¾à¤˜";
+            nepaliMonth = "माघ";
             break;
 
         case 11:
-            nepaliMonth = "à¤«à¤¾à¤²à¥à¤—à¥à¤¨";
+            nepaliMonth = "फाल्गुन";
             break;
 
         case 12:
-            nepaliMonth = "à¤šà¥ˆà¤¤à¥à¤°";
+            nepaliMonth = "चैत्र";
             break;
     }
     return nepaliMonth;
@@ -258,31 +258,31 @@ function getEnglishMonth(month) {
 function getNepaliDayOfWeekInString(day) {
     switch (day) {
         case 1:
-            day = " à¤°à¤µà¤¿à¤¬à¤¾à¤°";
+            day = "आइतबार ";
             break;
 
         case 2:
-            day = "à¤¸à¥‹à¤®à¤¬à¤¾à¤° ";
+            day = "सोमबार ";
             break;
 
         case 3:
-            day = "à¤®à¤‚à¤—à¤²à¤¬à¤¾à¤° ";
+            day = "मंगलबार ";
             break;
 
         case 4:
-            day = "à¤¬à¥à¤§à¤¬à¤¾à¤° ";
+            day = "बुधबार ";
             break;
 
         case 5:
-            day = "à¤—à¥à¤°à¥à¤¬à¤¾à¤° ";
+            day = "बिहिबार ";
             break;
 
         case 6:
-            day = "à¤¶à¥à¤•à¥à¤°à¤¬à¤¾à¤° ";
+            day = "शुक्रबार ";
             break;
 
         case 7:
-            day = "à¤¶à¤¨à¤¿à¤¬à¤¾à¤° ";
+            day = "शनिबार ";
             break;
     }
     return day;
@@ -435,34 +435,34 @@ function isNumeric(n) {
 function englishToNepaliNumber(number) {
     switch (number) {
         case "0":
-            number = "à¥¦";
+            number = "०";
             break;
         case "1":
-            number = "à¥§";
+            number = "१";
             break;
         case "2":
-            number = "à¥¨";
+            number = "२";
             break;
         case "3":
-            number = "à¥©";
+            number = "३";
             break;
         case "4":
-            number = "à¥ª";
+            number = "४";
             break;
         case "5":
-            number = "à¥«";
+            number = "५";
             break;
         case "6":
-            number = "à¥¬";
+            number = "६";
             break;
         case "7":
-            number = "à¥­";
+            number = "७";
             break;
         case "8":
-            number = "à¥®";
+            number = "८";
             break;
         case "9":
-            number = "à¥¯";
+            number = "९";
             break;
     }
     return number;

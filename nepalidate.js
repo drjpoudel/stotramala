@@ -14,7 +14,7 @@
 
         function getNepaliDate() {
             const today = new Date();
-            const nepaliYear = 2082; // For example, update this as needed
+            const nepaliYear = 2081; // For example, update this as needed
             const nepaliMonth = 4;  // For example, श्रावण
             const nepaliDay = today.getDate();
             const weekdayIndex = today.getDay();

@@ -5,42 +5,43 @@ const nepali_years_and_days_in_months = [
     // Your data array goes here
 ];
 
-function convertEnglishDateToNepali(year, month, day) {
-    // This function will convert the English date to Nepali date.
-    // For simplicity, we'll assume a fixed offset. You should replace this with the actual calculation.
-    
-    // Example calculation for demonstration. This will need to be updated with actual conversion logic.
-    const nepaliYear = year + 57; // This is a placeholder. Actual conversion logic is needed.
-    const nepaliMonth = month; // Simplified. You need actual month conversion.
-    const nepaliDay = day; // Simplified. You need actual day conversion.
-    
+const nepaliMonths = ["बैशाख", "जेष्ठ", "आषाढ", "श्रावण", "भाद्र", "आश्वयज", "कात्तिक", "मङ्सिर", "पुष", "माघ", "फाल्गुन", "चैत्र"];
+const nepaliDigits = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
+
+const gregorianToNepali = (gregorianYear, gregorianMonth, gregorianDay) => {
+    // Example conversion logic, replace with actual conversion logic
+    // This is a simplified placeholder
+    let nepaliYear = gregorianYear + 57;
+    let nepaliMonth = gregorianMonth - 1;
+    let nepaliDay = gregorianDay;
+
+    if (gregorianMonth === 1 && gregorianDay < 14) {
+        nepaliMonth = 0;
+        nepaliDay = gregorianDay + 13;
+    } else {
+        // Example adjustment for the actual conversion
+    }
+
     return [nepaliYear, nepaliMonth, nepaliDay];
-}
+};
 
-function localizeNumber(numberString) {
-    // Convert English numbers to Nepali numbers
-    const nepaliNumbers = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
-    return numberString.replace(/\d/g, (match) => nepaliNumbers[parseInt(match)]);
-}
+const localizeNumber = (num) => {
+    return num.toString().split('').map(digit => nepaliDigits[parseInt(digit)]).join('');
+};
 
-function updateDate() {
+const updateNepaliDate = () => {
     const currentDate = new Date();
-    const year = currentDate.getFullYear();
-    const month = currentDate.getMonth() + 1;
-    const day = currentDate.getDate();
+    const gregorianYear = currentDate.getFullYear();
+    const gregorianMonth = currentDate.getMonth() + 1; // Months are zero-based in JavaScript
+    const gregorianDay = currentDate.getDate();
 
-    const [nepaliYear, nepaliMonth, nepaliDay] = convertEnglishDateToNepali(year, month, day);
+    const [nepaliYear, nepaliMonth, nepaliDay] = gregorianToNepali(gregorianYear, gregorianMonth, gregorianDay);
+
+    const nepaliDateStr = `विक्रम सं - ${nepaliYear} ${nepaliMonths[nepaliMonth]} ${localizeNumber(nepaliDay)} ${["आइतबार", "सोमबार", "मंगलबार", "बुधबार", "बिहिबार", "शुक्रबार", "शनिबार"][currentDate.getDay()]}`;
     
-    const englishDateString = `Vikram Samvat ${nepaliYear} ${nepaliMonth} ${nepaliDay}`;
-    const nepaliDateString = `${localizeNumber(nepaliYear)} ${localizeNumber(nepaliMonth)} ${localizeNumber(nepaliDay)}`;
+    document.getElementById('nepali-date').innerText = nepaliDateStr;
+};
 
-    document.getElementById('DATE_IN_ENGLISH').innerText = englishDateString;
-    document.getElementById('DATE_IN_NEPALI').innerText = nepaliDateString;
+setInterval(updateNepaliDate, 1000); // Update every second
+updateNepaliDate(); // Initial call
 
-    console.log("Date Updated: " + englishDateString);
-}
-
-setInterval(updateDate, 1000); // Update every second
-
-// Initial call to set date immediately
-updateDate();

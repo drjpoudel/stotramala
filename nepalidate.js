@@ -11,7 +11,7 @@ function displayNepaliDate(year, month, day) {
     const dateElement = document.getElementById("nepaliDate");
     const daysElement = document.getElementById("days");
 
-    dateElement.textContent = `आजको मिति: ${year} ${monthNames[month - 1]} ${day}`;
+    dateElement.textContent = `विक्रम सं: ${year} ${monthNames[month - 1]} ${day}`;
 
     const daysInMonth = nepali_years_and_days_in_months.find(y => y[0] === year)[month];
     daysElement.innerHTML = '';

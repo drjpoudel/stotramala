@@ -1,7 +1,7 @@
   const nepaliYearsAndDaysInMonths = [
             [2000, 30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
             [2001, 31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
-            [2081, 30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30]
+            [2082, 30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30]
         ];
 
         const monthNames = ["बैशाख", "जेष्ठ", "आषाढ़", "श्रावण", "भाद्र", "आश्विन", "कार्तिक", "मंसिर", "पुष", "माघ", "फाल्गुण", "चैत्र"];
@@ -12,17 +12,49 @@
             return num.toString().split('').map(digit => devanagariDigits[digit]).join('');
         }
 
+        // Example function to convert Gregorian date to Nepali date
+        function convertToNepaliDate(gregorianDate) {
+            // This is a simplified example, real conversion logic will be complex
+            const startNepaliYear = 2000;
+            const startNepaliMonth = 0; // बैशाख
+            const startNepaliDay = 1;
+
+            const startGregorianDate = new Date(1943, 3, 14); // Example: start date for 2000 BS
+
+            const diffDays = Math.floor((gregorianDate - startGregorianDate) / (1000 * 60 * 60 * 24));
+            let nepaliYear = startNepaliYear;
+            let nepaliMonth = startNepaliMonth;
+            let nepaliDay = startNepaliDay + diffDays;
+
+            while (true) {
+                const daysInCurrentMonth = nepaliYearsAndDaysInMonths[nepaliYear - startNepaliYear][nepaliMonth + 1];
+                if (nepaliDay <= daysInCurrentMonth) {
+                    break;
+                }
+                nepaliDay -= daysInCurrentMonth;
+                nepaliMonth++;
+                if (nepaliMonth > 11) {
+                    nepaliMonth = 0;
+                    nepaliYear++;
+                }
+            }
+
+            return {
+                year: nepaliYear,
+                month: nepaliMonth,
+                day: nepaliDay
+            };
+        }
+
         function getNepaliDate() {
             const today = new Date();
-            const nepaliYear = 2081; // For example, update this as needed
-            const nepaliMonth = 4;  // For example, श्रावण
-            const nepaliDay = today.getDate();
+            const nepaliDate = convertToNepaliDate(today);
             const weekdayIndex = today.getDay();
 
             return {
-                year: arabicToDevanagariNumber(nepaliYear),
-                month: monthNames[nepaliMonth],
-                day: arabicToDevanagariNumber(nepaliDay),
+                year: arabicToDevanagariNumber(nepaliDate.year),
+                month: monthNames[nepaliDate.month],
+                day: arabicToDevanagariNumber(nepaliDate.day),
                 weekday: weekdayNames[weekdayIndex]
             };
         }
@@ -33,4 +65,5 @@
             document.getElementById('current-weekday').textContent = nepaliDate.weekday;
         }
 
-        displayNepaliDate();
+        document.addEventListener('DOMContentLoaded', displayNepaliDate);
+    

@@ -29,11 +29,12 @@ function displayNepaliDate() {
     daysElement.innerHTML = '';
     for (let i = 1; i <= daysInMonth; i++) {
         const dayElement = document.createElement('div');
-        dayElement.textContent = i;
+        dayElement.textContent = i.toString().replace(/\d/g, d => "०१२३४५६७८९"[d]);
         dayElement.className = 'day';
-        dayElement.onclick = () => alert(`You clicked on date ${i} ${monthNames[month - 1]} ${year}`);
+        dayElement.onclick = () => alert(`तपाईंले ${year} ${monthNames[month - 1]} ${i.toString().replace(/\d/g, d => "०१२३४५६७८९"[d])} मिति चयन गर्नुभयो`);
         daysElement.appendChild(dayElement);
     }
 }
 
 displayNepaliDate();
+

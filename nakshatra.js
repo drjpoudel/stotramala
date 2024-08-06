@@ -3,7 +3,6 @@
         var currentDate = new Date();
         // Define your Naxatras and their respective dates
         var naxatra = [
-               
     { date: new Date('2024-08-06'), text: " मघा नक्षत्र " },
     { date: new Date('2024-08-07'), text: " पूर्वफाल्गुनी नक्षत्र " },
     { date: new Date('2024-08-08'), text: " उत्तरफाल्गुनी नक्षत्र " },
@@ -39,17 +38,15 @@
     { date: new Date('2024-09-07'), text: " चित्रा नक्षत्र " },
     { date: new Date('2024-09-08'), text: " स्वाति नक्षत्र " }
     
-
-    
       // Add more dates as needed
           
   ];
       
         // Find the quote that matches the current date
         var matchingNaxatra = quotes.find(function(naxatra) {
-            return currentDate.toDateString() === quote.date.toDateString();
+            return currentDate.toDateString() === naxatra.date.toDateString();
         });
-        // Display the quote if found
+        // Display the naxatra if found
         if (matchingNaxatra) {
             document.getElementById('naxatra').textContent = matchingNaxatra.text;
         } else {

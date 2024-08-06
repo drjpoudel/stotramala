@@ -1,6 +1,4 @@
-    <div id="utsavas"></div>
 
-    <script>
         // Get the current date
         var currentDate = new Date();
 

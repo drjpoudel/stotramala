@@ -1,82 +1,39 @@
-const नेपालीवर्षरमासदिन = [
-    [२०००, ३०, ३२, ३१, ३२, ३१, ३०, ३०, ३०, २९, ३०, २९, ३१],
-    [२००१, ३१, ३१, ३२, ३१, ३१, ३१, ३०, २९, ३०, २९, ३०, ३०],
-    // ... (अन्य वर्ष डेटा)
-    [२०८१, ३१, ३२, ३१, ३२, ३१, ३०, ३०, ३०, २९, ३०, ३०, ३०],
-    [२०८२, ३०, ३२, ३१, ३२, ३१, ३०, ३०, ३०, २९, ३०, ३०, ३०],
+const nepali_years_and_days_in_months = [
+    [2000, 30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 29, 31],
+    [2001, 31, 31, 32, 31, 31, 31, 30, 29, 30, 29, 30, 30],
+    // Add the rest of the data here...
+    [2082, 30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30]
 ];
 
-let वर्तमानवर्षसूचक = ०;
-let वर्तमानमाससूचक = १; // मान लें १ = बैशाख
+const monthNames = ["बैशाख", "जेष्ठ", "आषाढ़", "श्रावण", "भाद्र", "आश्विन", "कार्तिक", "मंसिर", "पुष", "माघ", "फाल्गुण", "चैत्र"];
 
-function क्यालेन्डरप्रस्तुतगर्नुहोस्(वर्षसूचक, माससूचक) {
-    const दिनग्रिड = document.getElementById('days-grid');
-    दिनग्रिड.innerHTML = '';
-
-    const वर्ष = नेपालीवर्षरमासदिन[वर्षसूचक][०];
-    const मासदिन = नेपालीवर्षरमासदिन[वर्षसूचक][माससूचक];
-
-    document.getElementById('month-year').textContent = `${वर्ष} - ${नेपालीमासनामप्राप्तगर्नुहोस्(माससूचक)}`;
-
-    for (let i = १; i <= मासदिन; i++) {
-        const दिनDiv = document.createElement('div');
-        दिनDiv.classList.add('day');
-        दिनDiv.textContent = i;
-        if (आजकादिनहुनुहोस्(वर्ष, माससूचक, i)) {
-            दिनDiv.classList.add('today');
-        }
-        if (छुट्टीकोदिनहुनुहोस्(वर्ष, माससूचक, i)) {
-            दिनDiv.classList.add('holiday');
-        }
-        दिनग्रिड.appendChild(दिनDiv);
-    }
-}
-
-function नेपालीमासनामप्राप्तगर्नुहोस्(माससूचक) {
-    const नेपालीमास = ['बैशाख', 'जेठ', 'असार', 'साउन', 'भदौ', 'आश्विन', 'कार्तिक', 'मंसिर', 'पौष', 'माघ', 'फाल्गुन', 'चैत्र'];
-    return नेपालीमास[माससूचक - १];
-}
-
-function आजकादिनहुनुहोस्(वर्ष, मास, दिन) {
-    const आज = new Date();
-    const आजनेपाली = नेपालीतिथिमापरिवर्तनगर्नुहोस्(आज); // यो कार्यान्वयन गर्नुहोस्
-    return वर्ष === आजनेपाली.year && मास === आजनेपाली.month && दिन === आजनेपाली.day;
-}
-
-function छुट्टीकोदिनहुनुहोस्(वर्ष, मास, दिन) {
-    // छुट्टीहरू परिभाषित गर्नुहोस्
-    const छुट्टीहरू = [
-        // { वर्ष: २०८०, मास: १, दिन: १ } // थप छुट्टीहरू थप्नुहोस्
-    ];
-    return छुट्टीहरू.some(छुट्टी => छुट्टी.year === वर्ष && छुट्टी.month === मास && छुट्टी.day === दिन);
-}
-
-document.getElementById('prev-month').addEventListener('click', () => {
-    वर्तमानमाससूचक--;
-    if (वर्तमानमाससूचक < १) {
-        वर्तमानमाससूचक = १२;
-        वर्तमानवर्षसूचक--;
-    }
-    क्यालेन्डरप्रस्तुतगर्नुहोस्(वर्तमानवर्षसूचक, वर्तमानमाससूचक);
-});
-
-document.getElementById('next-month').addEventListener('click', () => {
-    वर्तमानमाससूचक++;
-    if (वर्तमानमाससूचक > १२) {
-        वर्तमानमाससूचक = १;
-        वर्तमानवर्षसूचक++;
-    }
-    क्यालेन्डरप्रस्तुतगर्नुहोस्(वर्तमानवर्षसूचक, वर्तमानमाससूचक);
-});
-
-क्यालेन्डरप्रस्तुतगर्नुहोस्(वर्तमानवर्षसूचक, वर्तमानमाससूचक);
-
-function नेपालीतिथिमापरिवर्तनगर्नुहोस्(तिथि) {
-    // ग्रेगोरियन देखि नेपाली तिथि रूपान्तरण कार्यान्वयन गर्नुहोस्
-    // यो एक प्लेसहोल्डर फंक्शन हो
+function getCurrentNepaliDate() {
+    const currentDate = new Date();
+    // Add logic to convert current Gregorian date to Nepali date
+    // For simplicity, using a fixed Nepali date
     return {
-        year: २०८१,
-        month: १,
-        day: १
+        year: 2081,
+        month: 1,
+        day: 15
     };
 }
+
+function displayNepaliDate() {
+    const dateElement = document.getElementById("nepaliDate");
+    const daysElement = document.getElementById("days");
+    const { year, month, day } = getCurrentNepaliDate();
+
+    dateElement.textContent = `आजको मिति: ${year} ${monthNames[month - 1]} ${day}`;
+
+    const daysInMonth = nepali_years_and_days_in_months.find(y => y[0] === year)[month];
+    daysElement.innerHTML = '';
+    for (let i = 1; i <= daysInMonth; i++) {
+        const dayElement = document.createElement('div');
+        dayElement.textContent = i;
+        dayElement.className = 'day';
+        dayElement.onclick = () => alert(`You clicked on date ${i} ${monthNames[month - 1]} ${year}`);
+        daysElement.appendChild(dayElement);
+    }
+}
+
+displayNepaliDate();

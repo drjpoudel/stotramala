@@ -20,7 +20,7 @@ function displayNepaliDate() {
     const daysElement = document.getElementById("days");
     const { year, month, day } = getSpecificNepaliDate();
 
-    dateElement.textContent = `आजको मिति: ${year.toString().replace(/\d/g, d => "०१२३४५६७८९"[d])} ${monthNames[month - 1]} ${day.toString().replace(/\d/g, d => "०१२३४५६७८९"[d])}`;
+    dateElement.textContent = `विक्रम सं. ${year.toString().replace(/\d/g, d => "०१२३४५६७८९"[d])} ${monthNames[month - 1]} ${day.toString().replace(/\d/g, d => "०१२३४५६७८९"[d])}`;
 
     const daysInMonth = nepali_years_and_days_in_months.find(y => y[0] === year)[month];
     daysElement.innerHTML = '';

@@ -1,47 +1,39 @@
-const nepali_years_and_days_in_months = [
-    [2080, 31, 32, 31, 32, 31, 30, 30, 30, 29, 29, 30, 30],
-    [2081, 31, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30],
-    [2082, 30, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30]
-    // Your data array goes here
+const nepaliMonths = ["वैशाख", "जेष्ठ", "आषाढ", "श्रावण", "भाद्रपद", "आश्वयुज", "कार्तिक", "मार्गशीर्ष", "पौष", "माघ", "फाल्गुन", "चैत"];
+const nepaliDays = ["आइतवार", "सोमवार", "मंगलवार", "बुधवार", "बिहीवार", "शुक्रवार", "शनिवार"];
+
+// Example Nepali year days per month data
+const nepaliYearsAndDaysInMonths = [
+    [2081, 31, 32, 31, 32, 31, 30, 30, 30, 29, 30, 30, 30]
+    // Add more years if needed
 ];
 
-const nepaliMonths = ["बैशाख", "जेष्ठ", "आषाढ", "श्रावण", "भाद्र", "आश्वयज", "कात्तिक", "मङ्सिर", "पुष", "माघ", "फाल्गुन", "चैत्र"];
-const nepaliDigits = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
-
-const gregorianToNepali = (gregorianYear, gregorianMonth, gregorianDay) => {
-    // Example conversion logic, replace with actual conversion logic
-    // This is a simplified placeholder
-    let nepaliYear = gregorianYear + 57;
-    let nepaliMonth = gregorianMonth - 1;
-    let nepaliDay = gregorianDay;
-
-    if (gregorianMonth === 1 && gregorianDay < 14) {
-        nepaliMonth = 0;
-        nepaliDay = gregorianDay + 13;
-    } else {
-        // Example adjustment for the actual conversion
-    }
-
-    return [nepaliYear, nepaliMonth, nepaliDay];
-};
-
-const localizeNumber = (num) => {
-    return num.toString().split('').map(digit => nepaliDigits[parseInt(digit)]).join('');
-};
-
-const updateNepaliDate = () => {
-    const currentDate = new Date();
-    const gregorianYear = currentDate.getFullYear();
-    const gregorianMonth = currentDate.getMonth() + 1; // Months are zero-based in JavaScript
-    const gregorianDay = currentDate.getDate();
-
-    const [nepaliYear, nepaliMonth, nepaliDay] = gregorianToNepali(gregorianYear, gregorianMonth, gregorianDay);
-
-    const nepaliDateStr = `विक्रम सं - ${nepaliYear} ${nepaliMonths[nepaliMonth]} ${localizeNumber(nepaliDay)} ${["आइतबार", "सोमबार", "मंगलबार", "बुधबार", "बिहिबार", "शुक्रबार", "शनिबार"][currentDate.getDay()]}`;
+function convertEnglishDateToNepali(year, month, day) {
+    // This function needs to convert Gregorian date to Nepali date
+    // Here we're just returning dummy values for demonstration
+    // Use actual conversion logic or library for accurate results
+    let nepaliYear = year + 56; // Rough conversion for demonstration
+    let nepaliMonth = nepaliMonths[month - 1];
+    let nepaliDay = day; // Needs accurate conversion
+    let nepaliWeekday = nepaliDays[new Date(year, month - 1, day).getDay()];
     
-    document.getElementById('nepali-date').innerText = nepaliDateStr;
-};
+    return {
+        nepaliDate: `${nepaliYear} ${nepaliMonth} ${nepaliDay} ${nepaliWeekday}`,
+        englishDate: `${year}-${month}-${day}`
+    };
+}
 
-setInterval(updateNepaliDate, 1000); // Update every second
-updateNepaliDate(); // Initial call
+function updateDateDisplay() {
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth() + 1;
+    const day = currentDate.getDate();
 
+    const dateString = convertEnglishDateToNepali(year, month, day);
+
+    document.getElementById('date-display').innerText = `विक्रम सं - ${dateString.nepaliDate}`;
+
+    setTimeout(updateDateDisplay, 1000); // Update every second
+}
+
+// Initialize the date display
+updateDateDisplay();

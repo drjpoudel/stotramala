@@ -4,7 +4,7 @@
 
         // Define your utsavas and their respective dates
         var utsavas = [
-            { date: new Date('2024-07-22'), text: "डाटा बेसमा कुनै पनि उत्सव भेटिएन" },
+            { date: new Date('2024-08-07'), text: " गोदा जयन्ती उत्सव " },
             { date: new Date('2025-02-25'), text: "डाटा बेसमा कुनै पनि उत्सव भेटिएन" },
             { date: new Date('2025-02-26'), text: "डाटा बेसमा कुनै पनि उत्सव भेटिएन" },
             { date: new Date('2025-02-27'), text: "डाटा बेसमा कुनै पनि उत्सव भेटिएन" },

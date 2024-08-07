@@ -4,10 +4,10 @@
 
         // Define your utsavas and their respective dates
         var utsavas = [
-            { date: new Date('2024-08-07'), text: " गोदा जयन्ती उत्सव " },
-            { date: new Date('2024-08-09'), text: "नाग पञ्चमी / नाग पूजा " },
-            { date: new Date('2025-08-10'), text: "कल्की जयन्ती" },
-            { date: new Date('2025-08-16'), text: "झुलन उत्सव आरम्भ" },
+            { date: new Date('2024-08-07'), text: " श्री गोदा जयन्ती उत्सव " },
+            { date: new Date('2024-08-09'), text: " नाग पञ्चमी / नाग पूजा " },
+            { date: new Date('2025-08-10'), text: " श्रीकल्की जयन्ती" },
+            { date: new Date('2025-08-16'), text: " झुलन उत्सव आरम्भ" },
             { date: new Date('2025-02-28'), text: "डाटा बेसमा कुनै पनि उत्सव भेटिएन" },
             { date: new Date('2025-03-01'), text: "डाटा बेसमा कुनै पनि उत्सव भेटिएन" },
             { date: new Date('2025-03-02'), text: "डाटा बेसमा कुनै पनि उत्सव भेटिएन" },

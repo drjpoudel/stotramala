@@ -150,7 +150,7 @@ function getNepaliMonthInString(month) {
 
     switch (month) {
         case 1:
-            nepaliMonth = "बैशाख";
+            nepaliMonth = "वैशाख";
             break;
 
         case 2:
@@ -158,11 +158,11 @@ function getNepaliMonthInString(month) {
             break;
 
         case 3:
-            nepaliMonth = "असार";
+            nepaliMonth = "आषाढ";
             break;
 
         case 4:
-            nepaliMonth = "श्रावन";
+            nepaliMonth = "श्रावण";
             break;
 
         case 5:
@@ -170,7 +170,7 @@ function getNepaliMonthInString(month) {
             break;
 
         case 6:
-            nepaliMonth = "असोज";
+            nepaliMonth = "आश्विन";
             break;
 
         case 7:
@@ -178,7 +178,7 @@ function getNepaliMonthInString(month) {
             break;
 
         case 8:
-            nepaliMonth = "मंग्सिर";
+            nepaliMonth = "मार्गशीर्ष";
             break;
 
         case 9:
@@ -190,7 +190,7 @@ function getNepaliMonthInString(month) {
             break;
 
         case 11:
-            nepaliMonth = "फाल्गुन";
+            nepaliMonth = "फाल्गुण";
             break;
 
         case 12:
@@ -258,7 +258,7 @@ function getEnglishMonth(month) {
 function getNepaliDayOfWeekInString(day) {
     switch (day) {
         case 1:
-            day = "आइतबार ";
+            day = "रविबार ";
             break;
 
         case 2:
@@ -274,7 +274,7 @@ function getNepaliDayOfWeekInString(day) {
             break;
 
         case 5:
-            day = "बिहिबार ";
+            day = "गुरुबार ";
             break;
 
         case 6:

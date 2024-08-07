@@ -65,5 +65,5 @@
         if (matchingUtsava) {
             document.getElementById('utsavas').textContent = matchingUtsava.text;
         } else {
-            document.getElementById('utsavas').textContent = "No Data";
+            document.getElementById('utsavas').textContent = "आज डाटा बेसमा कुनै पनि उत्सव भेटिएन";
         }

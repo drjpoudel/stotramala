@@ -299,6 +299,6 @@
         if (matchingEvents) {
             document.getElementById('events').textContent = matchingEvents.text;
         } else {
-            document.getElementById('events').textContent = "श्रीरामानुज संवत् १००८";
+            document.getElementById('events').textContent = "No Data";
         }
    

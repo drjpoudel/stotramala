@@ -116,7 +116,7 @@
             return currentDate.toDateString() === moon.date.toDateString();
         });
         // Display the quote if found
-        if (matchingEvents) {
+        if (matchingMoons) {
             document.getElementById('moon').textContent = matchingMoons.text;
         } else {
             document.getElementById('moon').textContent = "चन्द्र राशि - No Data ";

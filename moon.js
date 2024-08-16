@@ -119,6 +119,6 @@
         if (matchingEvents) {
             document.getElementById('moon').textContent = matchingMoons.text;
         } else {
-            document.getElementById('moon').textContent = "चन्द्र राशी - No Data ";
+            document.getElementById('moon').textContent = "चन्द्र राशि - No Data ";
         }
   

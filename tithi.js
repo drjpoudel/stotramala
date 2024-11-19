@@ -2,7 +2,7 @@
         // Get the current date
         var currentDate = new Date();
         // Define your quotes and their respective dates
-        var quotes = [
+        var tithis = [
                
     { date: new Date('2024-07-04'), text: "आषाढ कृष्ण चतुर्दशी मृगशिरा" },
     { date: new Date('2024-07-05'), text: "आषाढ कृष्ण औशी आर्द्रा" },
@@ -51,7 +51,7 @@
     { date: new Date('2024-08-17'), text: "श्रावण शुक्ल त्रयोदशी" },
     { date: new Date('2024-08-18'), text: "श्रावण शुक्ल चतुर्दशी" },
     { date: new Date('2024-08-19'), text: "श्रावण शुक्ल पूर्णिमा" },
-	{ date: new Date('2024-08-20'), text: "भाद्र कृष्ण प्रतिपदा" },
+    { date: new Date('2024-08-20'), text: "भाद्र कृष्ण प्रतिपदा" },
     { date: new Date('2024-08-21'), text: "भाद्र कृष्ण द्वितीया " },
     { date: new Date('2024-08-22'), text: "भाद्र कृष्ण तृतीया" },
     { date: new Date('2024-08-23'), text: "भाद्र कृष्ण चतुर्थी" },
@@ -78,13 +78,13 @@
   ];
       
         // Find the quote that matches the current date
-        var matchingQuote = quotes.find(function(quote) {
+        var matchingTithi = tithis.find(function(tithi) {
             return currentDate.toDateString() === quote.date.toDateString();
         });
         // Display the quote if found
-        if (matchingQuote) {
-            document.getElementById('quote').textContent = matchingQuote.text;
+        if (matchingTithi) {
+            document.getElementById('tithi').textContent = matchingTithi.text;
         } else {
-            document.getElementById('quote').textContent = "जय श्रीमन्नारायण!";
+            document.getElementById('tithi').textContent = "जय श्रीमन्नारायण!";
         }
  

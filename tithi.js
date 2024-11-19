@@ -142,7 +142,6 @@
     { date: new Date('2025-01-10'), text: "शुक्ल एकादशी" },
     { date: new Date('2025-01-11'), text: "शुक्ल द्वादशी" }
 
-    
       // Add more dates as needed
           
   ];

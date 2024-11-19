@@ -2,7 +2,7 @@
         // Get the current date
         var currentDate = new Date();
         // Define your quotes and their respective dates
-        var tithis = [
+        var tithi = [
                
     { date: new Date('2024-07-04'), text: "आषाढ कृष्ण चतुर्दशी मृगशिरा" },
     { date: new Date('2024-07-05'), text: "आषाढ कृष्ण औशी आर्द्रा" },
@@ -148,7 +148,7 @@
       
         // Find the quote that matches the current date
         var matchingTithi = tithis.find(function(tithi) {
-            return currentDate.toDateString() === quote.date.toDateString();
+            return currentDate.toDateString() === tithi.date.toDateString();
         });
         // Display the quote if found
         if (matchingTithi) {

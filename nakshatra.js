@@ -36,7 +36,16 @@ var naxatra = [
     { date: new Date('2024-09-05'), text: "हस्ता नक्षत्र" },
     { date: new Date('2024-09-06'), text: "हस्ता नक्षत्र" },
     { date: new Date('2024-09-07'), text: "चित्रा नक्षत्र" },
-    { date: new Date('2024-09-08'), text: "स्वाति नक्षत्र" }
+    { date: new Date('2024-09-08'), text: "स्वाति नक्षत्र" },
+{ date: new Date('2024-10-20'), text: "पुनर्वसु नक्षत्र" },
+{ date: new Date('2024-10-21'), text: "पुष्य नक्षत्र" },
+{ date: new Date('2024-10-22'), text: "आश्लेषा नक्षत्र" },
+{ date: new Date('2024-10-23'), text: "मघा नक्षत्र" },
+{ date: new Date('2024-10-24'), text: "पूर्वा फाल्गुनी नक्षत्र" },
+{ date: new Date('2024-10-25'), text: "उत्तर फाल्गुनी नक्षत्र" },
+{ date: new Date('2024-10-26'), text: "हस्त नक्षत्र" },
+{ date: new Date('2024-10-27'), text: "चित्रा नक्षत्र" }
+  
     // Add more dates as needed
 ];
 

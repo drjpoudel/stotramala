@@ -14,7 +14,7 @@ let startingNakshatraIndex = nakshatras.indexOf(startingNakshatra);
 
 // Function to calculate the current Nakshatra based on the day
 function getCurrentNakshatra() {
-    const startDate = new Date('2024-11-14T02:24:00'); // Starting point of the calculation
+    const startDate = new Date('2024-11-14T03:24:00'); // Starting point of the calculation
     const now = new Date();
 
     // Calculate the number of full days elapsed since the start date

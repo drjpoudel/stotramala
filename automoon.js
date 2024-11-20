@@ -22,7 +22,7 @@
         function updateRashiDisplay() {
             const rashiDisplay = document.getElementById('current-rashi');
             const currentRashi = getCurrentRashi();
-            rashiDisplay.textContent = `अहिलेको राशी: ${currentRashi}`;
+            rashiDisplay.textContent = `चन्द्र राशी: ${currentRashi}`;
         }
 
         // Update the rashi display every second

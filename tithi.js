@@ -4,8 +4,8 @@
         // Define your quotes and their respective dates
         var tithi = [
          
-            { date: new Date('2024-11-01'), text: "चन्द्र राशि - तुला" },
-	    { date: new Date('2024-11-01'), text: "चन्द्र राशि - तुला" }
+            { date: new Date('2025-01-11'), text: "शुक्ल द्वादशी" },
+            { date: new Date('2025-01-11'), text: "शुक्ल द्वादशी" }
 
             // Add more quotes and dates as needed
         ];

@@ -110,5 +110,5 @@ var matchingNaxatra = naxatra.find(function(n) {
 if (matchingNaxatra) {
     document.getElementById('naxatra').textContent = matchingNaxatra.text;
 } else {
-    document.getElementById('naxatra').textContent = "जय श्रीमन्नारायण!";
+    document.getElementById('naxatra').textContent = "No Data";
 }

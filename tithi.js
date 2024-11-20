@@ -17,6 +17,6 @@
         if (matchingTithis) {
             document.getElementById('tithi').textContent = matchingTithis.text;
         } else {
-            document.getElementById('tithi').textContent = "आजको तिथि - No Data ";
+            document.getElementById('tithi').textContent = "No Data ";
         }
   

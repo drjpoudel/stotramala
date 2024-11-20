@@ -1,6 +1,6 @@
-
-        // Get the current date
+ // Get the current date
         var currentDate = new Date();
+
         // Define your quotes and their respective dates
         var tithi = [
                
@@ -144,16 +144,16 @@
 
       // Add more dates as needed
           
-  ];
-      
-        // Find the quote that matches the current date
-        var matchingTithi = tithis.find(function(tithi) {
-            return currentDate.toDateString() === tithi.date.toDateString();
-        });
-        // Display the quote if found
-        if (matchingTithi) {
-            document.getElementById('tithi').textContent = matchingTithi.text;
+   // Find today's tithi
+        var todayTithi = tithi.find(item => 
+            item.date.toDateString() === currentDate.toDateString()
+        );
+
+        // Display the tithi or a message if not found
+        var displayElement = document.getElementById('tithi-display');
+        if (todayTithi) {
+            displayElement.textContent = todayTithi.text;
         } else {
-            document.getElementById('tithi').textContent = "जय श्रीमन्नारायण!";
+            displayElement.textContent = "आजको तिथि उपलब्ध छैन।";
         }
- 
+   

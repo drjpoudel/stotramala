@@ -4,7 +4,7 @@
         // Define your quotes and their respective dates
         var tithi = [
          
-     { date: new Date('2024-11-01'), text: "चन्द्र राशि - तुला" },
+            { date: new Date('2024-11-01'), text: "चन्द्र राशि - तुला" },
 	    { date: new Date('2024-11-01'), text: "चन्द्र राशि - तुला" }
 
             // Add more quotes and dates as needed
@@ -17,6 +17,6 @@
         if (matchingTithis) {
             document.getElementById('tithi').textContent = matchingTithis.text;
         } else {
-            document.getElementById('tithi').textContent = "चन्द्र राशि - No Data ";
+            document.getElementById('tithi').textContent = "आजको तिथि - No Data ";
         }
   

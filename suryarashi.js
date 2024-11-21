@@ -1,4 +1,4 @@
-  const rashis = [
+const rashis = [
             { sign: 'मेष ', start: { month: 3, day: 21 }, end: { month: 4, day: 19 } },
             { sign: 'वृषभ ', start: { month: 4, day: 20 }, end: { month: 5, day: 20 } },
             { sign: 'मिथुन ', start: { month: 5, day: 21 }, end: { month: 6, day: 20 } },
@@ -36,18 +36,9 @@
         function updateRashi() {
             const rashi = getCurrentRashi();
             if (rashi) {
-                setDataToID('RASHI_IN_DEVANAGARI', rashi);  // Show in Devanagari
+                document.getElementById('soorya').innerHTML = rashi;  // Show in Devanagari in 'soorya' element
             }
             setTimeout(updateRashi, 1000);  // Update every second
-        }
-
-        // Helper function to set data to HTML element
-        function setDataToID(id, data) {
-            try {
-                document.getElementById(id).innerHTML = data;
-            } catch (err) {
-                console.log("Error setting data to ID", err);
-            }
         }
 
         // Start the Rashi update when the page loads

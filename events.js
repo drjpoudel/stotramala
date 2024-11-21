@@ -1,10 +1,17 @@
-
-        // Get the current date
+ // Get the current date
         var currentDate = new Date();
-        // Define your quotes and their respective dates
+
+        // Remove the time part for accurate comparison
+        currentDate.setHours(0, 0, 0, 0);
+
+        // Define your events with respective dates
         var events = [
-            
-            { date: new Date('2024-11-25'), text: " दक्षिणायन, कालयुक्त संवत्सर, हेमन्त ऋतु" },
+{ date: new Date('2024-11-21'), text: " दक्षिणायन, कालयुक्त संवत्सर, हेमन्त ऋतु" },
+{ date: new Date('2024-11-22'), text: " दक्षिणायन, कालयुक्त संवत्सर, हेमन्त ऋतु" },
+{ date: new Date('2024-11-23'), text: " दक्षिणायन, कालयुक्त संवत्सर, हेमन्त ऋतु" },
+{ date: new Date('2024-11-24'), text: " दक्षिणायन, कालयुक्त संवत्सर, हेमन्त ऋतु" },
+{ date: new Date('2024-11-25'), text: " दक्षिणायन, कालयुक्त संवत्सर, हेमन्त ऋतु" },
+           { date: new Date('2024-11-20'), text: " दक्षिणायन, कालयुक्त संवत्सर, हेमन्त ऋतु" },
             { date: new Date('2024-11-26'), text: " दक्षिणायन, कालयुक्त संवत्सर, हेमन्त ऋतु" },
             { date: new Date('2024-11-27'), text: " दक्षिणायन, कालयुक्त संवत्सर, हेमन्त ऋतु" },
             { date: new Date('2024-11-28'), text: " दक्षिणायन, कालयुक्त संवत्सर, हेमन्त ऋतु" },
@@ -144,18 +151,21 @@
             { date: new Date('2025-04-10'), text: " उत्तरायण, कालयुक्त संवत्सर, वसन्त ऋतु" },
             { date: new Date('2025-04-11'), text: " उत्तरायण, कालयुक्त संवत्सर, वसन्त ऋतु" },
             { date: new Date('2025-04-12'), text: " उत्तरायण, कालयुक्त संवत्सर, वसन्त ऋतु" },
-            { date: new Date('2025-04-13'), text: " उत्तरायण, कालयुक्त संवत्सर, वसन्त ऋतु" }
-
-            // Add more quotes and dates as needed
+            { date: new Date('2025-02-09'), text: "उत्तरायण, कालयुक्त संवत्सर, हेमन्त ऋतु" }
+            // Add more events as needed
         ];
-        // Find the quote that matches the current date
-        var matchingEvents = events.find(function(events) {
-            return currentDate.toDateString() === events.date.toDateString();
+
+        // Check for a matching event
+        var eventText = "No event for today."; // Default message
+        events.forEach(function(event) {
+            // Remove the time part for comparison
+            var eventDate = new Date(event.date);
+            eventDate.setHours(0, 0, 0, 0);
+
+            if (eventDate.getTime() === currentDate.getTime()) {
+                eventText = event.text;
+            }
         });
-        // Display the quote if found
-        if (matchingEvents) {
-            document.getElementById('events').textContent = matchingEvents.text;
-        } else {
-            document.getElementById('events').textContent = "No Data";
-        }
-   
+
+        // Display the event text
+        document.getElementById('event-display').textContent = eventText;

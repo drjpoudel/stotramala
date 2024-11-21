@@ -43,4 +43,4 @@ function isDateInRange(date, startDate, endDate) {
 }
 
 // Display the current Soorya Rashi
-document.getElementById('soorya-rashi').textContent = `आज का सोर्य राशि है: ${getSooryaRashi()}`;
+document.getElementById('soorya-rashi').textContent = `सूर्य राशि: ${getSooryaRashi()}`;

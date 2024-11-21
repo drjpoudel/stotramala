@@ -93,7 +93,19 @@ var naxatra = [
 { date: new Date('2024-12-08'), text: "शतभिषा नक्षत्र" },
 { date: new Date('2024-12-09'), text: "पूर्वभाद्रपदा नक्षत्र" },
 { date: new Date('2024-12-10'), text: "उत्तरभाद्रपदा नक्षत्र" },
-{ date: new Date('2024-12-11'), text: "रेवती नक्षत्र" }
+{ date: new Date('2024-12-11'), text: "रेवती नक्षत्र" },
+  { date: new Date('2024-12-12'), text: "अश्विनी नक्षत्र" },
+  { date: new Date('2024-12-13'), text: "भरणी नक्षत्र" },
+  { date: new Date('2024-12-14'), text: "रोहिणी नक्षत्र" },
+  { date: new Date('2024-12-15'), text: "मृगशिरा नक्षत्र" },
+  { date: new Date('2024-12-16'), text: "आर्द्रा नक्षत्र" },
+  { date: new Date('2024-12-17'), text: "पुनर्वसु नक्षत्र" },
+  { date: new Date('2024-12-18'), text: "तिष्य नक्षत्र" },
+  { date: new Date('2024-12-19'), text: "अश्लेषा नक्षत्र" },
+  { date: new Date('2024-12-20'), text: "मघा नक्षत्र" },
+  { date: new Date('2024-12-21'), text: "पूर्व फाल्गुनी नक्षत्र" },
+  { date: new Date('2024-12-22'), text: "उत्तर फाल्गुनी नक्षत्र" },
+  { date: new Date('2024-12-23'), text: "हस्त नक्षत्र" }
 
   
     // Add more dates as needed

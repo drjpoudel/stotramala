@@ -1,5 +1,4 @@
-   
-       // JavaScript for music player functionality
+// JavaScript for music player functionality
 const audio = document.getElementById('audio');
 const playPauseBtn = document.getElementById('play-pause-btn');
 const stopBtn = document.getElementById('stop');
@@ -199,5 +198,3 @@ nextBtn.addEventListener('click', nextSong);
 
 // Initial render of the playlist
 renderPlaylist();
-
-  

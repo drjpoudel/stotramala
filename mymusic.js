@@ -28,11 +28,11 @@ const fastForwardTime = 5; // Seconds to fast forward or rewind
 
 // Initialize playlist
 const playlistSongs = [
-    { file: 'https://archive.org/download/ramanuj-bhajan-jai-ramanuj-jai-ramanuj-unlimited/Ramanuj%20Bhajan%20Jai%20Ramanuj%20Jai%20Ramanuj%20Unlimited.mp3', title: ' Bhajan 1 - जय रामानुज भजन ' },
-    { file: 'https://archive.org/download/stotra-ratnam-aalavandar/StotraRatnam%20Aalavandar.mp3', title: 'Stotram 2 - स्तोत्र रत्नम् ' },
-    { file: 'https://archive.org/download/stotra-ratnam-aalavandar/THIRUPPAAVAI.mp3', title: 'Divya Prabandham 1 - Tiruppavai' },
-    { file: 'https://archive.org/download/stotra-ratnam-aalavandar/Tiru%20Pallandu.mp3', title: 'Divya Prabandham 2 - Tirupapallandu' },
-    { file: 'https://archive.org/download/stotra-ratnam-aalavandar/Thiruppalliyezhuchi.mp3', title: 'Divya Prabandham 3 - Tirupalli Yeducchi' }
+    { file: 'https://archive.org/download/ramanuj-bhajan-jai-ramanuj-jai-ramanuj-unlimited/Ramanuj%20Bhajan%20Jai%20Ramanuj%20Jai%20Ramanuj%20Unlimited.mp3', title: ' भजन 1 - जय रामानुज भजन ' },
+    { file: 'https://archive.org/download/stotra-ratnam-aalavandar/StotraRatnam%20Aalavandar.mp3', title: 'स्तोत्र 2 - स्तोत्र रत्नम् ' },
+    { file: 'https://archive.org/download/stotra-ratnam-aalavandar/THIRUPPAAVAI.mp3', title: 'दिव्य प्रबन्धम 1 - तिरुप्पावै' },
+    { file: 'https://archive.org/download/stotra-ratnam-aalavandar/Tiru%20Pallandu.mp3', title: 'दिव्य प्रबन्धम 2 - तिरुपल्लान्डु ' },
+    { file: 'https://archive.org/download/stotra-ratnam-aalavandar/Thiruppalliyezhuchi.mp3', title: 'दिव्य प्रबन्धम 3 - तिरुपल्लीयेडुच्ची ' }
 ];
 
 function renderPlaylist() {

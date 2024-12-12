@@ -29,7 +29,16 @@ const fastForwardTime = 5; // Seconds to fast forward or rewind
 // Initialize playlist
 const playlistSongs = [
     { file: 'https://archive.org/download/ramanuj-bhajan-jai-ramanuj-jai-ramanuj-unlimited/Ramanuj%20Bhajan%20Jai%20Ramanuj%20Jai%20Ramanuj%20Unlimited.mp3', title: ' भजन 1 - जय रामानुज भजन ' },
-    { file: 'https://archive.org/download/stotra-ratnam-aalavandar/StotraRatnam%20Aalavandar.mp3', title: 'स्तोत्र 2 - स्तोत्र रत्नम् ' },
+    { file: 'https://archive.org/download/stotra-ratnam-aalavandar/Tiru%20Pallandu.mp3', title: 'स्तोत्र 2 - वरदवल्लभास्तोत्रम्  ' },
+    { file: 'https://archive.org/download/stotra-ratnam-aalavandar/StotraRatnam%20Aalavandar.mp3', title: 'स्तोत्र 1 - स्तोत्ररत्नम् ( आलवन्दार ) ' },
+    { file: 'https://archive.org/download/stotra-ratnam-aalavandar/Tiru%20Pallandu.mp3', title: 'स्तोत्र 2 - विष्णु सहस्रनाम स्तोत्रम् - चिन्न जीयर स्वामिजी ' },
+    { file: 'https://archive.org/download/stotra-ratnam-aalavandar/Tiru%20Pallandu.mp3', title: 'स्तोत्र 3 - वेङ्कतेश स्तोत्रम्  ' },
+    { file: 'https://archive.org/download/stotra-ratnam-aalavandar/Tiru%20Pallandu.mp3', title: 'स्तोत्र 2 - वेङ्कतेश सुप्रभातम् ' },
+    { file: 'https://archive.org/download/stotra-ratnam-aalavandar/Tiru%20Pallandu.mp3', title: 'स्तोत्र 2 - सुदर्शन शतकम्  ' },
+    { file: 'https://archive.org/download/stotra-ratnam-aalavandar/Tiru%20Pallandu.mp3', title: 'स्तोत्र 2 - भज यतिराज स्तोत्रम् ' },
+    { file: 'https://archive.org/download/stotra-ratnam-aalavandar/Tiru%20Pallandu.mp3', title: 'स्तोत्र 2 - पञ्चायुध स्तोत्रम्  ' },
+    { file: 'https://archive.org/download/stotra-ratnam-aalavandar/Tiru%20Pallandu.mp3', title: 'स्तोत्र 2 - नारायणकवचम् ' },
+    { file: 'https://archive.org/download/stotra-ratnam-aalavandar/Tiru%20Pallandu.mp3', title: 'स्तोत्र 2 - गजेन्द्रमोक्ष स्तोत्रम्  ' },
     { file: 'https://archive.org/download/stotra-ratnam-aalavandar/THIRUPPAAVAI.mp3', title: 'दिव्य प्रबन्धम 1 - तिरुप्पावै' },
     { file: 'https://archive.org/download/stotra-ratnam-aalavandar/Tiru%20Pallandu.mp3', title: 'दिव्य प्रबन्धम 2 - तिरुपल्लान्डु ' },
     { file: 'https://archive.org/download/stotra-ratnam-aalavandar/Thiruppalliyezhuchi.mp3', title: 'दिव्य प्रबन्धम 3 - तिरुपल्लीयेडुच्ची ' }

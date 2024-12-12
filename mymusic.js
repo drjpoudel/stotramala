@@ -31,7 +31,7 @@ const playlistSongs = [
     { file: 'https://archive.org/download/ramanuj-bhajan-jai-ramanuj-jai-ramanuj-unlimited/Ramanuj%20Bhajan%20Jai%20Ramanuj%20Jai%20Ramanuj%20Unlimited.mp3', title: ' भजन 1 - जय रामानुज भजन ' },
     { file: 'https://archive.org/download/stotra-ratnam-aalavandar/Tiru%20Pallandu.mp3', title: 'स्तोत्र 2 - वरदवल्लभास्तोत्रम्  ' },
     { file: 'https://archive.org/download/stotra-ratnam-aalavandar/StotraRatnam%20Aalavandar.mp3', title: 'स्तोत्र 1 - स्तोत्ररत्नम् ( आलवन्दार ) ' },
-    { file: 'https://archive.org/download/stotra-ratnam-aalavandar/Tiru%20Pallandu.mp3', title: 'स्तोत्र 2 - विष्णु सहस्रनाम स्तोत्रम् - चिन्न जीयर स्वामिजी ' },
+    { file: 'https://archive.org/download/sri-vishnu-sahasranamam-by-h.-h-chinna-jeeyar-swamiji-sanskrit-jetworld_202412/Sri%20Vishnu%20Sahasranamam%20by%20H.H%20Chinna%20Jeeyar%20Swamiji%20%20Sanskrit%20%20Jetworld.mp3', title: 'स्तोत्र 2 - विष्णु सहस्रनाम स्तोत्रम् - चिन्न जीयर स्वामिजी ' },
     { file: 'https://archive.org/download/stotra-ratnam-aalavandar/Tiru%20Pallandu.mp3', title: 'स्तोत्र 3 - वेङ्कतेश स्तोत्रम्  ' },
     { file: 'https://archive.org/download/stotra-ratnam-aalavandar/Tiru%20Pallandu.mp3', title: 'स्तोत्र 2 - वेङ्कतेश सुप्रभातम् ' },
     { file: 'https://archive.org/download/stotra-ratnam-aalavandar/Tiru%20Pallandu.mp3', title: 'स्तोत्र 2 - सुदर्शन शतकम्  ' },

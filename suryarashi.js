@@ -13,46 +13,55 @@ const sunSigns = [
     { sign: "मीन (Pisces)", startDate: "03-14", endDate: "04-12" }
 ];
 
-// Function to get the current Soorya Rashi based on today's date
-function getSooryaRashi() {
-    const today = new Date();
-    const currentMonthDay = `${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}`;
+// Function to determine the current Soorya Rashi
+function getSooryaRashi(date = new Date()) {
+    const formattedDate = formatMonthDay(date);
     
     for (let { sign, startDate, endDate } of sunSigns) {
-        if (isDateInRange(currentMonthDay, startDate, endDate)) {
+        if (isDateInRange(formattedDate, startDate, endDate)) {
             return sign;
         }
     }
-    return "Unknown Rashi"; // Fallback if no match
+    return "Unknown Rashi";
 }
 
-// Function to check if the current date is within a given date range
+// Helper to check if a date is within a range
 function isDateInRange(date, startDate, endDate) {
     const year = new Date().getFullYear();
-    const dateObj = parseDate(date, year);
-    const startObj = parseDate(startDate, year);
-    let endObj = parseDate(endDate, year);
+    const current = parseDate(date, year);
+    const start = parseDate(startDate, year);
+    let end = parseDate(endDate, year);
 
-    // Adjust year for ranges crossing the year boundary
-    if (endObj < startObj) {
-        endObj.setFullYear(year + 1);
+    // Handle year boundary cases
+    if (end < start) {
+        end.setFullYear(year + 1);
     }
 
-    return dateObj >= startObj && dateObj <= endObj;
+    return current >= start && current <= end;
 }
 
-// Helper function to parse a date string in MM-DD format
-function parseDate(date, year) {
-    const [month, day] = date.split('-').map(Number);
-    return new Date(year, month - 1, day); // Months are zero-based
+// Helper to parse MM-DD into a Date
+function parseDate(dateStr, year) {
+    const [month, day] = dateStr.split('-').map(Number);
+    return new Date(year, month - 1, day);
 }
 
-// Display the current Soorya Rashi
-document.addEventListener('DOMContentLoaded', () => {
+// Helper to format Date into MM-DD
+function formatMonthDay(date) {
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const day = date.getDate().toString().padStart(2, '0');
+    return `${month}-${day}`;
+}
+
+// Update the Soorya Rashi on the webpage
+function updateSooryaRashi() {
     const rashiElement = document.getElementById('soorya-rashi');
     if (rashiElement) {
         rashiElement.textContent = `सूर्य राशि: ${getSooryaRashi()}`;
     } else {
         console.error('Element with id "soorya-rashi" not found.');
     }
-});
+}
+
+// Automatically update on DOM content loaded
+document.addEventListener('DOMContentLoaded', updateSooryaRashi);

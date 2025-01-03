@@ -1,4 +1,3 @@
-// Soorya Rashi (Sun Signs) and their date ranges in Devanagari script
 const sunSigns = [
     { sign: "मेष (Aries)", startDate: "04-13", endDate: "05-13" },
     { sign: "वृषभ (Taurus)", startDate: "05-14", endDate: "06-14" },
@@ -19,13 +18,12 @@ function getSooryaRashi() {
     const today = new Date();
     const currentMonthDay = `${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}`;
     
-    for (let i = 0; i < sunSigns.length; i++) {
-        const { startDate, endDate, sign } = sunSigns[i];
-        
+    for (let { sign, startDate, endDate } of sunSigns) {
         if (isDateInRange(currentMonthDay, startDate, endDate)) {
             return sign;
         }
     }
+    return "Unknown Rashi"; // Fallback if no match
 }
 
 // Function to check if the current date is within a given date range
@@ -33,14 +31,22 @@ function isDateInRange(date, startDate, endDate) {
     const year = new Date().getFullYear();
     const dateObj = new Date(`${year}-${date}`);
     const startObj = new Date(`${year}-${startDate}`);
-    const endObj = new Date(`${year}-${endDate}`);
+    let endObj = new Date(`${year}-${endDate}`);
 
+    // Adjust year for ranges crossing the year boundary
     if (endObj < startObj) {
-        endObj.setFullYear(year + 1); // Adjust year for the range that crosses the year boundary
+        endObj.setFullYear(year + 1);
     }
 
     return dateObj >= startObj && dateObj <= endObj;
 }
 
 // Display the current Soorya Rashi
-document.getElementById('soorya-rashi').textContent = `सूर्य राशि: ${getSooryaRashi()}`;
+document.addEventListener('DOMContentLoaded', () => {
+    const rashiElement = document.getElementById('soorya-rashi');
+    if (rashiElement) {
+        rashiElement.textContent = `सूर्य राशि: ${getSooryaRashi()}`;
+    } else {
+        console.error('Element with id "soorya-rashi" not found.');
+    }
+});

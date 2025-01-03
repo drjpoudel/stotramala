@@ -29,9 +29,9 @@ function getSooryaRashi() {
 // Function to check if the current date is within a given date range
 function isDateInRange(date, startDate, endDate) {
     const year = new Date().getFullYear();
-    const dateObj = new Date(`${year}-${date}`);
-    const startObj = new Date(`${year}-${startDate}`);
-    let endObj = new Date(`${year}-${endDate}`);
+    const dateObj = parseDate(date, year);
+    const startObj = parseDate(startDate, year);
+    let endObj = parseDate(endDate, year);
 
     // Adjust year for ranges crossing the year boundary
     if (endObj < startObj) {
@@ -39,6 +39,12 @@ function isDateInRange(date, startDate, endDate) {
     }
 
     return dateObj >= startObj && dateObj <= endObj;
+}
+
+// Helper function to parse a date string in MM-DD format
+function parseDate(date, year) {
+    const [month, day] = date.split('-').map(Number);
+    return new Date(year, month - 1, day); // Months are zero-based
 }
 
 // Display the current Soorya Rashi

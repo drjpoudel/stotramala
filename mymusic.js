@@ -41,7 +41,8 @@ const playlistSongs = [
     { file: 'https://archive.org/download/mukunda-mala-stotram/Mukunda%20Mala%20stotram.mp3', title: 'स्तोत्र 2 - मुकुन्द माला स्तोत्रम्  ' },
     { file: 'https://archive.org/download/stotra-ratnam-aalavandar/THIRUPPAAVAI.mp3', title: 'दिव्य प्रबन्धम 1 - तिरुप्पावै' },
     { file: 'https://archive.org/download/stotra-ratnam-aalavandar/Tiru%20Pallandu.mp3', title: 'दिव्य प्रबन्धम 2 - तिरुपल्लान्डु ' },
-    { file: 'https://archive.org/download/stotra-ratnam-aalavandar/Thiruppalliyezhuchi.mp3', title: 'दिव्य प्रबन्धम 3 - तिरुपल्लीयेडुच्ची ' }
+    { file: 'https://archive.org/download/stotra-ratnam-aalavandar/Thiruppalliyezhuchi.mp3', title: 'दिव्य प्रबन्धम 3 - तिरुपल्लीयेडुच्ची ' },
+    { file: 'https://ne.shreesampradaya.com/wp-content/uploads/2025/01/गोदा-आमाको-विवाहमा-माला-साट्दा-नाच्ने-गीत-श्री-सम्प्रदाय-डट-कम.mp3', title: ' Goda mala gitam ' }
 ];
 
 function renderPlaylist() {

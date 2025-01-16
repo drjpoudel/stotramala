@@ -74,8 +74,29 @@
 { date: new Date('2025-01-26'), text: "कृष्ण द्वादशी" },
 { date: new Date('2025-01-27'), text: "कृष्ण त्रयोदशी" },
 { date: new Date('2025-01-28'), text: "कृष्ण चतुर्दशी" },
-{ date: new Date('2025-01-29'), text: "औसी" }
-
+{ date: new Date('2025-01-29'), text: "औसी" },
+{ date: new Date('2025-01-30'), text: "शुक्ल प्रतिपदा" },
+{ date: new Date('2025-01-31'), text: "शुक्ल द्वितीया" },
+{ date: new Date('2025-02-01'), text: "शुक्ल तृतीया" },
+{ date: new Date('2025-02-02'), text: "शुक्ल चतुर्थी" },
+{ date: new Date('2025-02-03'), text: "शुक्ल पञ्चमी" },
+{ date: new Date('2025-02-04'), text: "शुक्ल षष्ठी" },
+{ date: new Date('2025-02-05'), text: "शुक्ल अष्टमी" },
+{ date: new Date('2025-02-06'), text: "शुक्ल नवमी" },
+{ date: new Date('2025-02-07'), text: "शुक्ल दशमी" },
+{ date: new Date('2025-02-08'), text: "शुक्ल एकादशी" },
+{ date: new Date('2025-02-09'), text: "शुक्ल द्वादशी" },
+{ date: new Date('2025-02-10'), text: "शुक्ल त्रयोदशी" },
+{ date: new Date('2025-02-11'), text: "शुक्ल चतुर्दशी" },
+{ date: new Date('2025-02-12'), text: "शुक्ल पूर्णिमा" },
+{ date: new Date('2025-02-13'), text: "कृष्ण प्रतिपदा" },
+{ date: new Date('2025-02-14'), text: "कृष्ण द्वितीया" },
+{ date: new Date('2025-02-15'), text: "कृष्ण तृतीया" },
+{ date: new Date('2025-02-16'), text: "कृष्ण चतुर्थी" },
+{ date: new Date('2025-02-17'), text: "कृष्ण पञ्चमी" },
+{ date: new Date('2025-02-18'), text: "कृष्ण षष्ठी" },
+{ date: new Date('2025-02-19'), text: "कृष्ण सप्तमी" },
+{ date: new Date('2025-02-20'), text: "कृष्ण सप्तमी" }
             // Add more quotes and dates as needed
         ];
         // Find the quote that matches the current date

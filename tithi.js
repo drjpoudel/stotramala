@@ -60,7 +60,21 @@
     { date: new Date('2025-01-10'), text: "शुक्ल एकादशी" },
     { date: new Date('2025-01-11'), text: "शुक्ल द्वादशी" },
     { date: new Date('2025-01-11'), text: "शुक्ल द्वादशी" },
-    { date: new Date('2025-01-11'), text: "शुक्ल द्वादशी" }
+    { date: new Date('2025-01-11'), text: "शुक्ल द्वादशी" },
+{ date: new Date('2025-01-16'), text: "कृष्ण तृतीया" }, 
+{ date: new Date('2025-01-17'), text: "कृष्ण चतुर्थी" },  
+{ date: new Date('2025-01-18'), text: "कृष्ण पञ्चमी " },  
+{ date: new Date('2025-01-19'), text: "कृष्ण पञ्चमी" },
+{ date: new Date('2025-01-20'), text: "कृष्ण षष्ठी" },
+{ date: new Date('2025-01-21'), text: "कृष्ण सप्तमी" },
+{ date: new Date('2025-01-22'), text: "कृष्ण अष्टमी" },
+{ date: new Date('2025-01-23'), text: "कृष्ण नवमी" },
+{ date: new Date('2025-01-24'), text: "कृष्ण दशमी" },
+{ date: new Date('2025-01-25'), text: "कृष्ण एकादशी" },
+{ date: new Date('2025-01-26'), text: "कृष्ण द्वादशी" },
+{ date: new Date('2025-01-27'), text: "कृष्ण त्रयोदशी" },
+{ date: new Date('2025-01-28'), text: "कृष्ण चतुर्दशी" },
+{ date: new Date('2025-01-29'), text: "औसी" }
 
             // Add more quotes and dates as needed
         ];
